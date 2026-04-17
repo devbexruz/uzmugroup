@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Muhit
+venv/
+env/
+.venv/
+.env
+
+# Testlar va db
+.pytest_cache/
+alembic/versions/*
+*.sqlite3
