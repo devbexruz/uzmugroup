@@ -1,7 +1,7 @@
 from fastapi import APIRouter
+from app.api.v1.endpoints import auth, hemis
 
 api_router = APIRouter()
 
-# Misol uchun yangi endpointlarni qo'shish jarayoni:
-# from app.api.v1.endpoints import users
-# api_router.include_router(users.router, prefix="/users", tags=["Foydalanuvchilar"])
+api_router.include_router(auth.router, prefix="/auth", tags=["Avtorizatsiya (Auth)"])
+api_router.include_router(hemis.router, prefix="/hemis", tags=["HEMIS API"])

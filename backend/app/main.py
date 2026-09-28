@@ -9,6 +9,11 @@ app = FastAPI(
     openapi_url=f"{settings.API_V1_STR}/openapi.json"
 )
 
+from app.db.base import Base
+from app.db.session import engine
+# Jadvallarni yaratish
+Base.metadata.create_all(bind=engine)
+
 # CORS sozlamalari
 if settings.BACKEND_CORS_ORIGINS:
     app.add_middleware(
