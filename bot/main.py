@@ -161,7 +161,7 @@ def inline_query(query):
             )
     bot.answer_inline_query(query.id, results)
 import requests
-API_BASE_URL = "https://hstudent.nuu.uz/rest/v1"
+API_BASE_URL = "http://127.0.0.1:8002/api/v1"
 
 # Start buyrug'i uchun handler
 @bot.message_handler(commands=['start'])
